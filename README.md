@@ -1,6 +1,7 @@
 
 Folder structure:
 
+<pre>
   <basis-dir>
   +---Rules (Martins m4 rules)
   |   +--- ...
@@ -14,4 +15,5 @@ Folder structure:
       +---Makefile
       +---char_hannah.ps
       +--- ...
+</pre>
 
