@@ -1,0 +1,1131 @@
+
+dnl ***** Choose for Wizards and Sorcerers
+
+dnl PHB, p.192
+define(`spells_wizard_0', `
+spell_acid_splash
+spell_arcane_mark
+spell_dancing_lights
+spell_daze
+spell_detect_magic
+spell_detect_poison
+spell_disrupt_undead
+spell_flare
+spell_ghost_sound
+spell_light
+spell_mage_hand
+spell_mending
+spell_message
+spell_open_close
+spell_prestidigitation
+spell_ray_of_frost
+spell_read_magic
+spell_resistance
+spell_touch_of_fatigue
+')
+
+dnl PHB, p.192
+define(`spells_wizard_1', `
+spell_alarm
+spell_animate_rope
+spell_burning_hands
+spell_cause_fear
+spell_charm_person
+spell_chill_touch
+spell_color_spray
+spell_comprehend_languages
+spell_detect_secret_doors
+spell_detect_undead
+spell_disguise_self
+spell_endure_elements
+spell_enlarge_person
+spell_erase
+spell_expeditious_retreat
+spell_feather_fall
+spell_grease
+spell_hold_portal
+spell_hypnotism
+spell_identify
+spell_jump
+spell_mage_armor
+spell_magic_missile
+spell_magic_weapon
+spell_mount
+spell_nystuls_magic_aura
+spell_obscuring_mist
+spell_protection_from_chaos
+spell_protection_from_evil
+spell_protection_from_good
+spell_protection_from_law
+spell_ray_of_enfeeblement
+spell_reduce_person
+spell_shield
+spell_shocking_grasp
+spell_silent_image
+spell_sleep
+spell_summon_monster_1
+spell_tensers_floating_disk
+spell_true_strike
+spell_unseen_servant
+spell_ventriloquism
+dnl
+dnl spells from Sandstorm
+dnl
+spell_locate_water
+spell_parching_touch
+spell_sunstroke
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+dnl PHB, p.192 f.
+define(`spells_wizard_2', `
+spell_alter_self
+spell_arcane_lock
+spell_bears_endurance
+spell_blindness_deafness
+spell_blur
+spell_bulls_strength
+spell_cats_grace
+spell_command_undead
+spell_continual_flame
+spell_darkness
+spell_darkvision
+spell_daze_monster
+spell_detect_thoughts
+spell_eagles_splendor
+spell_false_life
+spell_flaming_sphere
+spell_fog_cloud
+spell_foxs_cunning
+spell_ghoul_touch
+spell_glitterdust
+spell_gust_of_wind
+spell_hypnotic_pattern
+spell_invisibility
+spell_knock
+spell_leomunds_trap
+spell_levitate
+spell_locate_object
+spell_magic_mouth
+spell_melfs_acid_arrow
+spell_minor_image
+spell_mirror_image
+spell_misdirection
+spell_obscure_object
+spell_owls_wisdom
+spell_protection_from_arrows
+spell_pyrotechnics
+spell_resist_energy
+spell_rope_trick
+spell_scare
+spell_scorching_ray
+spell_see_invisibility
+spell_shatter
+spell_spectral_hand
+spell_spider_climb
+spell_summon_monster_2
+spell_summon_swarm
+spell_tashas_hideous_laughter
+spell_touch_of_idiocy
+spell_web
+spell_whispering_wind
+dnl
+dnl spells from Sandstorm
+dnl
+spell_ashstar
+spell_desiccate
+spell_scimitar_of_sand
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+dnl PHB, p.193
+define(`spells_wizard_3', `
+spell_arcane_sight
+spell_blink
+spell_clairaudience_clairvoyance
+spell_daylight
+spell_deep_slumber
+spell_dispel_magic
+spell_displacement
+spell_explosive_runes
+spell_fireball
+spell_flame_arrow
+spell_fly
+spell_gaseous_form
+spell_gentle_repose
+spell_halt_undead
+spell_haste
+spell_heroism
+spell_hold_person
+spell_illusory_script
+spell_invisibility_sphere
+spell_keen_edge
+spell_leomunds_tiny_hut
+spell_lightning_bolt
+spell_magic_circle_against_chaos
+spell_magic_circle_against_evil
+spell_magic_circle_against_good
+spell_magic_circle_against_law
+spell_magic_weapon_greater
+spell_major_image
+spell_nondetection
+spell_phantom_steed
+spell_protection_from_energy
+spell_rage
+spell_ray_of_exhaustion
+spell_secret_page
+spell_sepia_snake_sigil
+spell_shrink_item
+spell_sleet_storm
+spell_slow
+spell_stinking_cloud
+spell_suggestion
+spell_summon_monster_3
+spell_tongues
+spell_vampiric_touch
+spell_water_breathing
+spell_wind_wall
+dnl
+dnl spells from Sandstorm
+dnl
+spell_body_blaze
+spell_haboob
+spell_protection_from_desiccation
+spell_storm_mote
+spell_tormenting_thirst
+spell_whispering_sand
+dnl
+dnl spells from Frostburn
+dnl
+spell_blood_snow
+')
+
+
+dnl PHB, p.193 f.
+define(`spells_wizard_4', `
+spell_animate_dead
+spell_arcane_eye
+spell_bestow_curse
+spell_charm_monster
+spell_confusion
+spell_contagion
+spell_crushing_despair
+spell_detect_scrying
+spell_dimension_door
+spell_dimensional_anchor
+spell_enervation
+spell_enlarge_person_mass
+spell_evards_black_tentacles
+spell_fear
+spell_fire_shield
+spell_fire_trap
+spell_geas_lesser
+spell_globe_of_invulnerability_lesser
+spell_hallucinatory_terrain
+spell_ice_storm
+spell_illusory_wall
+spell_invisibility_greater
+spell_leomunds_secure_shelter
+spell_locate_creature
+spell_minor_creation
+spell_otilukes_resilient_sphere
+spell_phantasmal_killer
+spell_polymorph
+spell_rainbow_pattern
+spell_rarys_mnemonic_enhancer
+spell_reduce_person_mass
+spell_remove_curse
+spell_scrying
+spell_shadow_conjuration
+spell_shout
+spell_solid_fog
+spell_stone_shape
+spell_stoneskin
+spell_summon_monster_4
+spell_wall_of_fire
+spell_wall_of_ice
+dnl
+dnl spells from Sandstorm
+dnl
+spell_blast_of_sand
+spell_desert_diversion
+spell_fuse_sand
+spell_parboil
+spell_sandform
+spell_searing_exposure
+spell_wall_of_salt
+spell_wall_of_sand
+spell_wall_of_water
+spell_wither
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+dnl PHB, p.194
+define(`spells_wizard_5', `
+spell_animal_growth
+spell_baleful_polymorph
+spell_bigbys_interposing_hand
+spell_blight
+spell_break_enchantment
+spell_cloudkill
+spell_cone_of_cold
+spell_contact_other_plane
+spell_dismissal
+spell_dominate_person
+spell_dream
+spell_fabricate
+spell_false_vision
+spell_feeblemind
+spell_hold_monster
+spell_leomunds_secret_chest
+spell_magic_jar
+spell_major_creation
+spell_mind_fog
+spell_mirage_arcana
+spell_mordenkainens_faithful_hound
+spell_mordenkainens_private_sanctum
+spell_nightmare
+spell_overland_flight
+spell_passwall
+spell_permanency
+spell_persistent_image
+spell_planar_binding_lesser
+spell_prying_eyes
+spell_rarys_telepathic_bond
+spell_seeming
+spell_sending
+spell_shadow_evocation
+spell_summon_monster_5
+spell_symbol_of_pain
+spell_symbol_of_sleep
+spell_telekinesis
+spell_teleport
+spell_transmute_mud_to_rock
+spell_transmute_rock_to_mud
+spell_wall_of_force
+spell_wall_of_stone
+spell_waves_of_fatigue
+dnl
+dnl spells from Sandstorm
+dnl
+spell_antifire_sphere
+spell_choking_sands
+spell_dispel_water
+spell_flaywind_burst
+spell_flesh_to_salt
+spell_sleep_mote
+spell_transmute_sand_to_glass
+spell_transmute_sand_to_stone
+spell_transmute_stone_to_sand
+spell_unearthly_heat
+spell_wall_of_magma
+dnl
+dnl spells from Frostburn
+dnl
+spell_anticold_sphere
+')
+
+dnl PHB, p.194 f.
+define(`spells_wizard_6', `
+spell_acid_fog
+spell_analyze_dweomer
+spell_antimagic_field
+spell_bears_endurance_mass
+spell_bigbys_forceful_hand
+spell_bulls_strength_mass
+spell_cats_grace_mass
+spell_chain_lightning
+spell_circle_of_death
+spell_contingency
+spell_control_water
+spell_create_undead
+spell_disintegrate
+spell_dispel_magic_greater
+spell_eagles_splendor_mass
+spell_eyebite
+spell_flesh_to_stone
+spell_foxs_cunning_mass
+spell_geas
+spell_globe_of_invulnerability
+spell_guards_and_wards
+spell_heroism_greater
+spell_legend_lore
+spell_mislead
+spell_mordenkainens_lucubration
+spell_move_earth
+spell_otilukes_freezing_sphere
+spell_owls_wisdom_mass
+spell_permanent_image
+spell_planar_binding
+spell_programmed_image
+spell_repulsion
+spell_shadow_walk
+spell_stone_to_flesh
+spell_suggestion_mass
+spell_summon_monster_6
+spell_symbol_of_fear
+spell_symbol_of_persuasion
+spell_tensers_transformation
+spell_true_seeing
+spell_undeath_to_death
+spell_veil
+spell_wall_of_iron
+dnl
+dnl spells from Sandstorm
+dnl
+spell_ashen_union
+spell_desiccate_mass
+spell_mummify
+spell_scalding_mud
+spell_symbol_of_thirst
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+dnl PHB, p.195
+define(`spells_wizard_7', `
+spell_arcane_sight_greater
+spell_banishment
+spell_bigbys_grasping_hand
+spell_control_undead
+spell_control_weather
+spell_delayed_blast_fireball
+spell_drawmijs_instant_summons
+spell_ethereal_jaunt
+spell_finger_of_death
+spell_forcecage
+spell_hold_person_mass
+spell_insanity
+spell_invisibility_mass
+spell_limited_wish
+spell_mordenkainens_magnificent_mansion
+spell_mordenkainens_sword
+spell_phase_door
+spell_plane_shift
+spell_power_word_blind
+spell_prismatic_spray
+spell_project_image
+spell_reverse_gravity
+spell_scrying_greater
+spell_sequester
+spell_shadow_conjuration_greater
+spell_simulacrum
+spell_spell_turning
+spell_statue
+spell_summon_monster_7
+spell_symbol_of_stunning
+spell_symbol_of_weakness
+spell_teleport_object
+spell_teleport_greater
+spell_vision
+spell_waves_of_exhaustion
+dnl
+dnl spells from Sandstorm
+dnl
+spell_flesh_to_salt_mass
+spell_vitrify
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+dnl PHB, p.195 f.
+define(`spells_wizard_8', `
+spell_antipathy
+spell_bigbys_clenched_fist
+spell_binding
+spell_charm_monster_mass
+spell_clone
+spell_create_greater_undead
+spell_demand
+spell_dimensional_lock
+spell_discern_location
+spell_horrid_wilting
+spell_incendiary_cloud
+spell_iron_body
+spell_maze
+spell_mind_blank
+spell_moment_of_prescience
+spell_otilukes_telekinetic_sphere
+spell_ottos_irresistible_dance
+spell_planar_binding_greater
+spell_polar_ray
+spell_polymorph_any_object
+spell_power_word_stun
+spell_prismatic_wall
+spell_protection_from_spells
+spell_prying_eyes_greater
+spell_scintillating_pattern
+spell_screen
+spell_shadow_evocation_greater
+spell_shout_greater
+spell_summon_monster_8
+spell_sunburst
+spell_symbol_of_death
+spell_symbol_of_insanity
+spell_sympathy
+spell_temporal_stasis
+spell_trap_the_soul
+dnl
+dnl spells from Sandstorm
+dnl
+spell_desert_binding
+spell_transcribe_symbol
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+dnl PHB, p.196
+define(`spells_wizard_9', `
+spell_astral_projection
+spell_bigbys_crushing_hand
+spell_dominate_monster
+spell_energy_drain
+spell_etherealness
+spell_foresight
+spell_freedom
+spell_gate
+spell_hold_monster_mass
+spell_imprisonment
+spell_meteor_swarm
+spell_mordenkainens_disjunction
+spell_power_word_kill
+spell_prismatic_sphere
+spell_refuge
+spell_shades
+spell_soul_bind
+spell_summon_monster_9
+spell_shapechange
+spell_teleportation_circle
+spell_time_stop
+spell_wail_of_banshee
+spell_weird
+spell_wish
+dnl
+dnl spells from Sandstorm
+dnl
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+
+dnl ***** Choose for Bards
+
+dnl PHB, p.181 f.
+define(`spells_bard_0', `
+spell_dancing_lights
+spell_daze
+spell_detect_magic
+spell_flare
+spell_ghost_sound
+spell_know_direction
+spell_light
+spell_lullaby
+spell_mage_hand
+spell_mending
+spell_message
+spell_open_close
+spell_prestidigitation
+spell_read_magic
+spell_resistance
+spell_summon_instrument
+dnl
+dnl spells from Sandstorm
+dnl
+')
+
+dnl PHB, p.182
+define(`spells_bard_1', `
+spell_alarm
+spell_animate_rope
+spell_cause_fear
+spell_charm_person
+spell_comprehend_languages
+spell_confusion_lesser
+spell_cure_light_wounds
+spell_detect_secret_doors
+spell_disguise_self
+spell_erase
+spell_expeditious_retreat
+spell_feather_fall
+spell_grease
+spell_hypnotism
+spell_identify
+spell_magic_mouth
+spell_nystuls_magic_aura
+spell_obscure_object
+spell_remove_fear
+spell_silent_image
+spell_sleep
+spell_summon_monster_1
+spell_tashas_hideous_laughter
+spell_undetectable_alignment
+spell_unseen_servant
+spell_ventriloquism
+dnl
+dnl spells from Sandstorm
+dnl
+')
+
+dnl PHB, p.182
+define(`spells_bard_2', `
+spell_alter_self
+spell_animal_messenger
+spell_animal_trance
+spell_blindness_deafness
+spell_blur
+spell_calm_emotions
+spell_cats_grace
+spell_cure_moderate_wounds
+spell_darkness
+spell_daze_monster
+spell_delay_poison
+spell_detect_thoughts
+spell_eagles_splendor
+spell_enthrall
+spell_foxs_cunning
+spell_glitterdust
+spell_heroism
+spell_hold_person
+spell_hypnotic_pattern
+spell_invisibility
+spell_locate_object
+spell_minor_image
+spell_mirror_image
+spell_misdirection
+spell_pyrotechnics
+spell_rage
+spell_scare
+spell_shatter
+spell_silence
+spell_sound_burst
+spell_suggestion
+spell_summon_monster_2
+spell_summon_swarm
+spell_tongues
+spell_whispering_wind
+dnl
+dnl spells from Sandstorm
+dnl
+spell_hydrate
+')
+
+dnl PHB, p.182
+define(`spells_bard_3', `
+spell_blink
+spell_charm_monster
+spell_clairaudience_clairvoyance
+spell_confusion
+spell_crushing_despair
+spell_cure_serious_wounds
+spell_daylight
+spell_deep_slumber
+spell_dispel_magic
+spell_displacement
+spell_fear
+spell_gaseous_form
+spell_geas_lesser
+spell_glibness
+spell_good_hope
+spell_haste
+spell_illusory_script
+spell_invisibility_sphere
+spell_leomunds_tiny_hut
+spell_major_image
+spell_phantom_steed
+spell_remove_curse
+spell_scrying
+spell_sculpt_sound
+spell_secret_page
+spell_see_invisibility
+spell_sepia_snake_sigil
+spell_slow
+spell_speak_with_animals
+spell_summon_monster_3
+dnl
+dnl spells from Sandstorm
+dnl
+spell_tormenting_thirst
+')
+
+dnl PHB, p.182 f.
+define(`spells_bard_4', `
+spell_break_enchantment
+spell_cure_critical_wounds
+spell_detect_scrying
+spell_dimension_door
+spell_dominate_person
+spell_freedom_movement
+spell_hallucinatory_terrain
+spell_hold_monster
+spell_invisibility_greater
+spell_legend_lore
+spell_leomunds_secure_shelter
+spell_locate_creature
+spell_modify_memory
+spell_neutralize_poison
+spell_rainbow_pattern
+spell_repel_vermin
+spell_shadow_conjuration
+spell_shout
+spell_speak_with_plants
+spell_summon_monster_4
+spell_zone_of_silence
+dnl
+dnl spells from Sandstorm
+dnl
+spell_dispel_water
+')
+
+dnl PHB, p.183
+define(`spells_bard_5', `
+spell_cure_light_wounds_mass
+spell_dispel_magic_greater
+spell_dream
+spell_false_vision
+spell_heroism_greater
+spell_mind_fog
+spell_mirage_arcana
+spell_mislead
+spell_nightmare
+spell_persistent_image
+spell_seeming
+spell_shadow_evocation
+spell_shadow_walk
+spell_song_of_discord
+spell_suggestion_mass
+spell_summon_monster_5
+dnl
+dnl spells from Sandstorm
+dnl
+')
+
+dnl PHB, p.183
+define(`spells_bard_6', `
+spell_analyze_dweomer
+spell_animate_objects
+spell_cats_grace_mass
+spell_charm_monster_mass
+spell_cure_moderate_wounds_mass
+spell_eagles_splendor_mass
+spell_eyebite
+spell_find_path
+spell_foxs_cunning_mass
+spell_geas
+spell_heroes_feast
+spell_ottos_irresistible_dance
+spell_permanent_image
+spell_programmed_image
+spell_project_image
+spell_scrying_greater
+spell_shout_greater
+spell_summon_monster_6
+spell_sympathetic_vibration
+spell_veil
+dnl
+dnl spells from Sandstorm
+dnl
+spell_mephit_mob
+')
+
+
+dnl Cleric Domain Template
+dnl List of Domain YYY on page ppp
+dnl define(`spells_domain_yyy_1', `')
+dnl define(`spells_domain_yyy_2', `')
+dnl define(`spells_domain_yyy_3', `')
+dnl define(`spells_domain_yyy_4', `')
+dnl define(`spells_domain_yyy_5', `')
+dnl define(`spells_domain_yyy_6', `')
+dnl define(`spells_domain_yyy_7', `')
+dnl define(`spells_domain_yyy_8', `')
+dnl define(`spells_domain_yyy_9', `')
+
+
+dnl ***** Additional Druid Spells
+
+define(`extra_spells_druid_0', `
+')
+
+define(`extra_spells_druid_1', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_cloak_of_shade
+spell_impede_suns_brilliance
+spell_locate_water
+spell_summon_desert_ally_1
+spell_sunstroke
+spell_wastestrider
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+define(`extra_spells_druid_2', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_desiccate
+spell_freedom_of_breath
+spell_halo_of_sand
+spell_hydrate
+spell_protection_from_desiccation
+spell_scimitar_of_sand
+spell_summon_desert_ally_2
+dnl
+dnl spells from Frostburn
+dnl
+spell_blood_snow
+dnl
+dnl spells from Complete Champion
+dnl
+spell_body_ward
+spell_divine_presence
+spell_interfaith_blessing
+spell_metal_fang
+spell_soul_ward
+')
+
+define(`extra_spells_druid_3', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_control_sand
+spell_haboob
+spell_soul_of_waste
+spell_storm_mote
+spell_summon_desert_ally_3
+spell_whispering_sand
+dnl
+dnl spells from Frostburn
+dnl
+spell_arctic_haze
+spell_aura_of_cold_lesser
+spell_binding_snow
+dnl
+dnl spells from Complete Champion
+dnl
+spell_forrest_eyes
+spell_forrest_voice
+')
+
+define(`extra_spells_druid_4', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_blast_of_sand
+spell_dispel_water
+spell_sandform
+spell_searing_exposure
+spell_skin_of_cactus
+spell_slipsand
+spell_summon_desert_ally_4
+spell_wall_of_salt
+spell_wall_of_sand
+spell_wall_of_water
+dnl
+dnl spells from Frostburn
+dnl
+dnl
+dnl spells from Complete Champion
+dnl
+spell_iconic_manifestation
+')
+
+define(`extra_spells_druid_5', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_choking_sands
+spell_flaywind_burst
+spell_flesh_to_salt
+spell_fuse_sand
+spell_sleep_mote
+spell_summon_desert_ally_5
+spell_transmute_sand_to_glass
+spell_transmute_sand_to_stone
+spell_transmute_stone_to_sand
+dnl
+dnl spells from Frostburn
+dnl
+spell_blizzard
+dnl
+dnl spells from Complete Champion
+dnl
+spell_bleed
+spell_seed_of_life
+')
+
+define(`extra_spells_druid_6', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_awaken_sand
+spell_desiccate_mass
+spell_mephit_mob
+spell_mummify
+spell_sandstorm
+spell_scalding_mud
+spell_summon_desert_ally_6
+spell_wall_of_magma
+dnl
+dnl spells from Frostburn
+dnl
+spell_animate_snow
+dnl
+dnl spells from Complete Champion
+dnl
+spell_wooden_blight
+')
+
+define(`extra_spells_druid_7', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_flesh_to_salt_mass
+spell_summon_desert_ally_7
+dnl
+dnl spells from Frostburn
+dnl
+spell_aura_of_cold_greater
+')
+
+define(`extra_spells_druid_8', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_flashflood
+spell_mantle_fiery_spirit
+spell_summon_desert_ally_8
+dnl
+dnl spells from Frostburn
+dnl
+dnl
+dnl spells from Complete Champion
+dnl
+spell_forrest_child
+')
+
+define(`extra_spells_druid_9', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_summon_desert_ally_9
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+
+
+dnl ***** Additional Ranger Spells
+
+define(`extra_spells_ranger_1', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_impede_suns_brilliance
+spell_locate_water
+spell_summon_desert_ally_1
+spell_wastestrider
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+define(`extra_spells_ranger_2', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_freedom_of_breath
+spell_halo_of_sand
+spell_hydrate
+spell_protection_from_desiccation
+spell_summon_desert_ally_2
+dnl
+dnl spells from Frostburn
+dnl
+dnl
+dnl spells from Complete Champion
+dnl
+spell_metal_fang
+')
+
+define(`extra_spells_ranger_3', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_haboob
+spell_skin_of_cactus
+spell_summon_desert_ally_3
+dnl
+dnl spells from Frostburn
+dnl
+spell_binding_snow
+')
+
+define(`extra_spells_ranger_4', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_slipsand
+spell_summon_desert_ally_4
+dnl
+dnl spells from Frostburn
+dnl
+spell_aura_of_cold_lesser
+')
+
+
+
+dnl ***** Additional Paladin Spells
+
+define(`extra_spells_paladin_1', `
+dnl from Sandstorm
+dnl from Frostburn
+')
+
+define(`extra_spells_paladin_2', `
+dnl from Sandstorm
+spell_freedom_of_breath
+spell_hydrate
+dnl from Frostburn
+')
+
+define(`extra_spells_paladin_3', `
+dnl from Sandstorm
+dnl from Frostburn
+spell_binding_snow
+')
+
+define(`extra_spells_paladin_4', `
+dnl from Sandstorm
+dnl from Frostburn
+spell_aura_of_cold_lesser
+')
+
+
+
+dnl ***** Additional Cleric Spells
+
+define(`extra_spells_cleric_0', `')
+
+define(`extra_spells_cleric_1', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_cloak_of_shade
+spell_locate_water
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+define(`extra_spells_cleric_2', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_desiccate
+spell_freedom_of_breath
+spell_hydrate
+dnl
+dnl spells from Frostburn
+dnl
+spell_blood_snow
+')
+
+define(`extra_spells_cleric_3', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_black_sand
+spell_control_sand
+spell_haboob
+spell_protection_from_desiccation
+spell_soul_of_waste
+dnl
+dnl spells from Frostburn
+dnl
+spell_aura_of_cold_lesser
+spell_binding_snow
+')
+
+define(`extra_spells_cleric_4', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_wall_of_salt
+spell_wall_of_sand
+spell_wall_of_water
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+define(`extra_spells_cleric_5', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_choking_sands
+spell_dispel_water
+spell_flaywind_burst
+spell_parboil
+spell_wall_of_magma
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+define(`extra_spells_cleric_6', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_desiccate_mass
+spell_mummify
+spell_symbol_of_thirst
+dnl
+dnl spells from Frostburn
+dnl
+spell_algid_enhancement
+')
+
+define(`extra_spells_cleric_7', `
+dnl
+dnl spells from Sandstorm
+dnl
+dnl
+dnl spells from Frostburn
+dnl
+spell_aura_of_cold_greater
+')
+
+define(`extra_spells_cleric_8', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_flashflood
+dnl
+dnl spells from Frostburn
+dnl
+')
+
+define(`extra_spells_cleric_9', `
+dnl
+dnl spells from Sandstorm
+dnl
+spell_mantle_fiery_spirit
+dnl
+dnl spells from Frostburn
+dnl
+')
+
