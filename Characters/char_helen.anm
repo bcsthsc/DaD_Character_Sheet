@@ -1,0 +1,135 @@
+% ******************** start of file: char_helen.anm
+%
+%
+%
+% ***************************************************** Familiar
+\begin{boxedminipage}[t]{\textwidth}
+\underline{\textbf{Familiar}}: Shadow Weasel \textbf{```Garret'''}\\
+% Shadow Template, see Manual of the Planes, p.190
+%
+define(`familiar_str_score',  3)% scores taken from: Monster Manual I, p. 282
+define(`familiar_dex_score', 15)%
+define(`familiar_con_score', 10)%
+define(`familiar_int_score',  2)% this will be adjusted later
+define(`familiar_wis_score', 12)%
+define(`familiar_cha_score',  5)%
+%
+define(`familiar_size',     `tiny')%
+define(`familiar_hd',            1)%
+define(`familiar_armor_natural', 0)%
+%
+define(`familiar_master_level', eval(level_sorcerer + level_wizard + level_shadowcaster))% PHB, p.52
+%
+define(`familiar_armor_bonus', eval((familiar_master_level + 1) / 2))% PHB, p.53
+%
+define(`familiar_int_score', eval(5 + (familiar_master_level + 1) / 2))% PHB, p.53
+%
+define(`familiar_hd', ifelse(eval(familiar_hd > familiar_master_level),1,familiar_hd,familiar_master_level))%PHB, p.52
+%
+define(`familiar_str', calc_ability_mod(familiar_str_score))%
+define(`familiar_dex', calc_ability_mod(familiar_dex_score))%
+define(`familiar_con', calc_ability_mod(familiar_con_score))%
+define(`familiar_int', calc_ability_mod(familiar_int_score))%
+define(`familiar_wis', calc_ability_mod(familiar_wis_score))%
+define(`familiar_cha', calc_ability_mod(familiar_cha_score))%
+%
+\begin{tabularx}{4.5cm}[t]{|X|c|c|}
+\hline
+\tabcenter{\textbf{Abilities}} & Score & Mod.\\
+\hline
+\tabcenter{Strength}        & familiar_str_score & emph_sign(familiar_str) \\
+\tabcenter{Dexterity}       & familiar_dex_score & emph_sign(familiar_dex) \\
+\tabcenter{Constitution}    & familiar_con_score & emph_sign(familiar_con) \\
+\tabcenter{Intelligence}    & familiar_int_score & emph_sign(familiar_int) \\
+\tabcenter{Wisdom}          & familiar_wis_score & emph_sign(familiar_wis) \\
+\tabcenter{Charisma}        & familiar_cha_score & emph_sign(familiar_cha) \\
+\hline
+\end{tabularx}
+%
+\hfill
+%
+\begin{tabular}[t]{l@{: }l}
+Gender\dotfill                 & male \\
+Size\dotfill                   & familiar_size \\
+Hit Dice\dotfill               & familiar_hd \\
+Hit Points\dotfill             & eval(char_HP / 2) \\% PHB, p.52
+Speed\dotfill                  & 30\aps{} ground, 30\aps{} climb \\ % +50% speed for shadow creature included
+AC (touch / flat)\dotfill      & eval(10 + stat_size_AC_mod(familiar_size) + familiar_armor_natural + familiar_armor_bonus + familiar_dex) %
+	                        (eval(10 + stat_size_AC_mod(familiar_size)                                                 + familiar_dex) /%
+                                 eval(10 + stat_size_AC_mod(familiar_size) + familiar_armor_natural + familiar_armor_bonus               )) \\
+Saves (Fort/Rflx/Will)\dotfill & %
+	emph_sign(eval(ifelse(eval(save_fort_base > 2),1,save_fort_base,2) + familiar_con)) / %
+	emph_sign(eval(ifelse(eval(save_rflx_base > 2),1,save_rflx_base,2) + familiar_dex)) / %
+	emph_sign(eval(ifelse(eval(save_will_base > 0),1,save_will_base,0) + familiar_wis))
+\end{tabular}
+%
+\hfill
+%
+\begin{tabular}[t]{l@{: }l}
+Initiative\dotfill           & emph_sign(familiar_dex) \\
+Space / Reach\dotfill        & 2,5\aps{} / 0\aps \\
+Attack (Bite)\dotfill        & emph_sign(eval(bonus_attack_base + stat_size_attack_mod(familiar_size) + ifelse(eval(familiar_str > familiar_dex),1,familiar_str,familiar_dex))) (1D3{}emph_sign(eval(familiar_str))) \\
+Special Attack\dotfill       & Attach \\
+\end{tabular}
+%
+\\[1ex]
+%
+define(`familiar_skill_balance',  0)% class-skill for weasel
+define(`familiar_skill_bluff',    0)%
+define(`familiar_skill_climb',    0)% class-skill for weasel
+define(`familiar_skill_hide',     1)% class-skill for weasel
+define(`familiar_skill_listen',   0)%
+define(`familiar_skill_move',     2)% class-skill for weasel +2 start value for weasel, +6 bonus for shadow creature included later
+define(`familiar_skill_spot',     2)% class-skill for weasel
+define(`familiar_skill_search',   0)%
+define(`familiar_skill_sense',    0)%
+define(`familiar_skill_survival', 0)%
+Skills: %
+  Balance	emph_sign(eval(ifelse(eval(familiar_skill_balance >rank_balance      ),1,familiar_skill_balance, rank_balance      )+familiar_dex+8)), %
+% Bluff		emph_sign(eval(ifelse(eval(familiar_skill_bluff   >rank_bluff        ),1,familiar_skill_bluff,   rank_bluff        )+familiar_cha)), %
+  Climb		emph_sign(eval(ifelse(eval(familiar_skill_climb   >rank_climb        ),1,familiar_skill_climb,   rank_climb        )+familiar_dex+8))~!, % weasel uses DEX for climbing
+  Hide		emph_sign(eval(ifelse(eval(familiar_skill_hide    >rank_hide         ),1,familiar_skill_hide,    rank_hide         )+familiar_dex + stat_size_hide_mod(familiar_size))), %
+  Listen	emph_sign(eval(ifelse(eval(familiar_skill_listen  >rank_listen       ),1,familiar_skill_listen,  rank_listen       )+familiar_wis+2)), % alertness
+  Move Silently	emph_sign(eval(ifelse(eval(familiar_skill_move    >rank_move_silently),1,familiar_skill_move,    rank_move_silently)+familiar_dex+4+6)), % race bonus (+4) and shadow creature bonus (+6)
+  Search	emph_sign(eval(ifelse(eval(familiar_skill_search  >rank_search       ),1,familiar_skill_search  ,rank_search       )+familiar_int)), %
+% Sense Motive	emph_sign(eval(ifelse(eval(familiar_skill_sense   >rank_sense_motive ),1,familiar_skill_sense   ,rank_sense_motive )+familiar_wis)), %
+  Spot		emph_sign(eval(ifelse(eval(familiar_skill_spot    >rank_spot         ),1,familiar_skill_spot    ,rank_spot         )+familiar_wis+2)), % alertness
+  Survival	emph_sign(eval(ifelse(eval(familiar_skill_survival>rank_survival     ),1,familiar_skill_survival,rank_survival     )+familiar_wis))\\
+Feats: Weapon Finesse \\ %
+Special Qualities: Scent, Low-Light Vision%
+, Darkvision 60\aps{}, Resistance Cold calc_min(eval(5 + familiar_hd), 20), Shadow Blend (su)% shadow creature, see Manual of the Planes, p.190
+% more shadow creature special abilities ...
+ifelse(eval(familiar_master_level >=  1), 1, `, Alertness (ex), Improved Evasion (ex), Share Spell, Empathic Link (su)')%
+ifelse(eval(familiar_master_level >=  3), 1, `, Deliver Touch Spell (su)')%
+ifelse(eval(familiar_master_level >=  5), 1, `, Speak with Master (ex)')%
+ifelse(eval(familiar_master_level >=  7), 1, `, Speak with Animals of its Kind (ex)')%
+ifelse(eval(familiar_master_level >= 11), 1, `, Spell Resistance (ex): eval(familiar_master_level + 5)')%
+ifelse(eval(familiar_master_level >= 13), 1, `, Scry on Familiar (sp)')%
+\end{boxedminipage}
+%
+% skill points per level (2 + INT, minimum 1)
+%
+% level INT INT-mod skill-points
+%   1    2    -4        1*4  (base animal summoned, first level *4 skill points)
+%   2    6    -2        1
+%   3    7    -2        1        feat
+%   4    7    -2        1
+%   5    8    -1        1
+%   6    8    -1        1        feat
+%   7    9    -1        1
+%   8    9    -1        1
+%   9   10     0        2        feat
+%  10   10     0        2
+%  11   11     0        2
+%  12   11     0        2        feat
+%  13   12     1        3
+%  14   12     1        3
+%  15   13     1        3        feat
+%  16   13     1        3
+%  17   14     2        4
+%  18   14     2        4        feat
+%  19   15     2        4
+%  20   15     2        4
+%
+%
+% ******************** end of file: char_helen.anm
