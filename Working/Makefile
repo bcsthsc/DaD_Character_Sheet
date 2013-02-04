@@ -29,8 +29,8 @@ all:
 	if [ -L $(@) ]; then rm $(@); fi
 	ln -s $(<) $(@)
 	if [ -L $(notdir $(<)) ]; then rm $(notdir $(<)); fi
-	ln -s $(<) $(notdir $(<))
-	if [ -e $(basename $(<)).anm ]; then ln -s $(basename $(<)).anm $(notdir $(basename $(<)).anm); fi
+	if [ ! -e $(notdir $(<)) ]; then ln -s $(<) $(notdir $(<)); fi
+	if [ -e $(basename $(<)).anm -a ! -e $(notdir $(basename $(<)).anm) ]; then ln -s $(basename $(<)).anm $(notdir $(basename $(<)).anm); fi
 
 %.tex: %.__m4 %.__inc
 	m4 -I$(RULES_DIR) -Dchar_filename=`echo $(<) | sed -e's/char_\([a-z]*\)\.__m4/\1/'` < $(<) > $(@)
