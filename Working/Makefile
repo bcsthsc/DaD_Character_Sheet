@@ -5,7 +5,7 @@
 #.SILENT:
 
 # specify the rules base directory
-RULES_DIR = ../DaD_M4_Rules_Latest/rules
+RULES_DIR = ../Rules
 # specify the character sources directory
 CHARACTERS_DIR = ../Characters
 
