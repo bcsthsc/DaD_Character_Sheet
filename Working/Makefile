@@ -10,6 +10,9 @@ RULES_DIR = ../Rules
 # specify the character sources directory
 CHARACTERS_DIR = ../Characters
 
+# specify LaTeX options
+LATEX_OPTIONS = -interaction=nonstopmode
+
 
 .PHONY : all
 all:
@@ -31,13 +34,15 @@ all:
 
 %.tex: %.__m4 %.__inc
 	m4 -I$(RULES_DIR) -Dchar_filename=`echo $(<) | sed -e's/char_\([a-z]*\)\.__m4/\1/'` < $(<) > $(@)
+	if [ -L $(basename $(@)).__inc ]; then rm $(basename $(@)).__inc; fi
+	if [ -L $(basename $(@)).__m4 ]; then rm $(basename $(@)).__m4; fi
 	if [ -L $(basename $(@)).inc ]; then rm $(basename $(@)).inc; fi
 	if [ -L $(basename $(@)).anm ]; then rm $(basename $(@)).anm; fi
 
 
 %.dvi: %.tex
-	latex $(<)
-	latex $(<)
+	latex $(LATEX_OPTIONS) $(<)
+	latex $(LATEX_OPTIONS) $(<)
 	if [ -e $(basename $(@)).log ]; then rm $(basename $(@)).log; fi
 	if [ -e $(basename $(@)).aux ]; then rm $(basename $(@)).aux; fi
 
@@ -48,8 +53,8 @@ all:
 	gzip --best -f $(<)
 
 %.pdf: %.tex
-	pdflatex $(<)
-	pdflatex $(<)
+	pdflatex $(LATEX_OPTIONS) $(<)
+	pdflatex $(LATEX_OPTIONS) $(<)
 	if [ -e $(basename $(@)).log ]; then rm $(basename $(@)).log; fi
 	if [ -e $(basename $(@)).aux ]; then rm $(basename $(@)).aux; fi
 
@@ -67,13 +72,6 @@ $(CHARACTER_NAMES): %: char_%.$(DEFAULT_FORMAT)
 	@echo making: $(<)
 	make $(<)
 
-#	@echo Target: $(@) "^" $(^) "<" $(<) ">" $(>) "+" $(+) "?" $(?) "%" $(%) "*" $(*)
-#	@echo CHARACTER_NAMES = $(CHARACTER_NAMES)
-#	for name in $(CHARACTER_NAMES); do \
-#		echo "->" make char_$${name}.$(DEFAULT_FORMAT); \
-#		make char_$${name}.$(DEFAULT_FORMAT); \
-#	done
-
 # Default:
 
 
@@ -83,6 +81,8 @@ $(CHARACTER_NAMES): %: char_%.$(DEFAULT_FORMAT)
 
 clean:
 	rm -f *.aux
+	rm -f *.__inc
+	rm -f *.__m4
 	rm -f *.dvi
 	rm -f *.log
 	rm -f *.pdf
