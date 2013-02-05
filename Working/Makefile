@@ -2,7 +2,7 @@
 # You can put this into a "working" directory or directly into your 
 # "characters" directory.
 
-#.SILENT:
+.SILENT:
 
 
 # specify the rules base directory
@@ -12,37 +12,48 @@ CHARACTERS_DIR = ../Characters
 
 # specify LaTeX options
 LATEX_OPTIONS = -interaction=nonstopmode
-
+# specify LaTeX options
+LATEX_RUNS = 1
 
 .PHONY : all
 all:
 	@echo Making: $(CHARACTER_NAMES)
 	$(MAKE) $(CHARACTER_NAMES)
 
+$(CHARACTERS_DIR)/%.m4:
+	$(error $(@) missing !)
+
+$(CHARACTERS_DIR)/%.inc:
+	$(warning $(@) missing !)
+
+$(CHARACTERS_DIR)/%.anm:
+	$(warning $(@) missing !)
 
 
-%.__m4: $(CHARACTERS_DIR)/%.m4
-	if [ -L $(@) ]; then rm $(@); fi
-	ln -s $(<) $(@)
+%.tex: $(CHARACTERS_DIR)/%.m4 $(CHARACTERS_DIR)/%.inc $(CHARACTERS_DIR)/%.anm
+	# Link sources to working dir
+ifneq ($(CHARACTERS_DIR),.)
+	if [ -L $(basename $(@)).m4 ]; then rm $(basename $(@)).m4; fi
+	ln -s $(CHARACTERS_DIR)/$(basename $(@)).m4 $(basename $(@)).m4
+	if [ -L $(basename $(@)).inc ]; then rm $(basename $(@)).inc; fi
+	ln -s $(CHARACTERS_DIR)/$(basename $(@)).inc $(basename $(@)).inc
+	if [ -L $(basename $(@)).anm ]; then rm $(basename $(@)).anm; fi
+	ln -s $(CHARACTERS_DIR)/$(basename $(@)).anm $(basename $(@)).anm
+endif
+	m4 -I$(RULES_DIR) -Dchar_filename=`echo $(@) | sed -e's/char_\([a-z]*\)\.tex/\1/'` < $(<) > $(@)
 
-%.__inc: $(CHARACTERS_DIR)/%.inc
-	if [ -L $(@) ]; then rm $(@); fi
-	ln -s $(<) $(@)
-	if [ -L $(notdir $(<)) ]; then rm $(notdir $(<)); fi
-	if [ ! -e $(notdir $(<)) ]; then ln -s $(<) $(notdir $(<)); fi
-	if [ -e $(basename $(<)).anm -a ! -e $(notdir $(basename $(<)).anm) ]; then ln -s $(basename $(<)).anm $(notdir $(basename $(<)).anm); fi
-
-%.tex: %.__m4 %.__inc
-	m4 -I$(RULES_DIR) -Dchar_filename=`echo $(<) | sed -e's/char_\([a-z]*\)\.__m4/\1/'` < $(<) > $(@)
-	if [ -L $(basename $(@)).__inc ]; then rm $(basename $(@)).__inc; fi
-	if [ -L $(basename $(@)).__m4 ]; then rm $(basename $(@)).__m4; fi
+	# Remove links
+ifneq ($(CHARACTERS_DIR),.)
+	if [ -L $(basename $(@)).m4 ]; then rm $(basename $(@)).m4; fi
 	if [ -L $(basename $(@)).inc ]; then rm $(basename $(@)).inc; fi
 	if [ -L $(basename $(@)).anm ]; then rm $(basename $(@)).anm; fi
+endif
 
 
 %.dvi: %.tex
-	latex $(LATEX_OPTIONS) $(<)
-	latex $(LATEX_OPTIONS) $(<)
+	for (( i=0 ; i<$(LATEX_RUNS) ; i=i+1 )) ; do \
+		latex $(LATEX_OPTIONS) $(<) ; \
+	done
 	if [ -e $(basename $(@)).log ]; then rm $(basename $(@)).log; fi
 	if [ -e $(basename $(@)).aux ]; then rm $(basename $(@)).aux; fi
 
@@ -53,8 +64,9 @@ all:
 	gzip --best -f $(<)
 
 %.pdf: %.tex
-	pdflatex $(LATEX_OPTIONS) $(<)
-	pdflatex $(LATEX_OPTIONS) $(<)
+	for (( i=0 ; i<$(LATEX_RUNS) ; i=i+1 )) ; do \
+		pdflatex $(LATEX_OPTIONS) $(<) ; \
+	done
 	if [ -e $(basename $(@)).log ]; then rm $(basename $(@)).log; fi
 	if [ -e $(basename $(@)).aux ]; then rm $(basename $(@)).aux; fi
 
